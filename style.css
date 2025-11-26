@@ -10,7 +10,7 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden; 
+  /* overflow: hidden;  */
   font-family: system-ui, sans-serif;
 }
 
@@ -163,4 +163,57 @@ button {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@media (max-width: 1000px) {
+    body {
+        flex-direction: column;
+        min-height: auto;
+        overflow-y: auto; 
+        overflow-x: hidden; 
+    }
+
+    .lado-esquerdo {
+        width: 100%;
+        height: auto; 
+        padding: 30px 20px;
+        justify-content: center;
+        overflow: visible; 
+    }
+
+    #imagem {
+        width: 80%; 
+        max-height: 280px; 
+        height: auto; 
+        object-fit: contain; 
+        margin-bottom: 30px; 
+        max-height: calc(100vh - 350px); 
+    }
+    .titulo {
+        font-size: 26px;
+        text-align: center;
+    }
+    .descSorteador {
+        font-size: 16px;
+        text-align: center;
+        max-width: 90%;
+        margin-bottom: 25px; 
+    }
+
+    .lado-direito {
+        width: 100%;
+        min-height: 450px;
+        height: auto;
+        position: static;
+        padding: 20px 0;
+    }
+
+    .card-info {
+        position: static;
+        transform: none;
+        width: 90%; 
+        margin: 20px auto;
+        height: auto;
+        padding: 20px;
+    }
 }
